@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to [Your Name]'s SUPER KAWAII Zone!</title>
+    
+    <style>
+        /* -----------------------------------------------------------
+           1. CSS STYLES (The 'Pink' and 'Cute' rules)
+           ----------------------------------------------------------- */
+
+        /* --- GLOBAL SETUP & BACKGROUND --- */
+        body {
+            /* The overall background is a soft pastel pink */
+            background-color: #ffdae9; 
+            /* A subtle repeating texture adds that 90s web feel */
+            background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+            font-family: "Comic Sans MS", "Courier New", sans-serif; /* "Retro" font choices */
+            color: #4a4a4a;
+            margin: 20px;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size: 20px;"><text y="18">💖</text></svg>'), auto; /* Customized sparkle cursor */
+        }
+
+        /* --- THE MAIN PAGE CONTAINER --- */
+        /* This creates the 'box' that holds your content, with the border shown in the concept. */
+        #container {
+            max-width: 850px; /* A good fixed width for retro sites */
+            margin: 0 auto; /* Centers the container on the screen */
+            background: #fff; /* White content background */
+            border: 6px solid #ff69b4; /* Solid, thick HOT PINK border */
+            border-radius: 20px; /* Highly rounded corners */
+            overflow: hidden; /* Keeps corner radius clean */
+            box-shadow: 8px 8px 0px rgba(255, 105, 180, 0.2); /* Soft pink drop shadow */
+        }
+
+        /* --- HEADER AREA (Pink to Purple Gradient) --- */
+        header {
+            background: linear-gradient(45deg, #ffb6c1, #ff69b4, #da70d6); /* Pink to Hot Pink to Orchid */
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 6px solid #ff69b4;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            text-shadow: 3px 3px 0px #c71585; /* Bold magenta text shadow */
+        }
+
+        /* The flickering star effect from the visual concept */
+        header h1::after {
+            content: " ✨";
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+
+        /* --- LAYOUT FOR SIDEBAR & MAIN CONTENT --- */
+        #main-content {
+            display: flex; /* Aligns sidebar and main section horizontally */
+        }
+
+        /* --- SIDEBAR NAVIGATION --- */
+        #sidebar {
+            width: 210px;
+            background-color: #fff0f5; /* Lavender Blush (very pale pink) */
+            padding: 20px;
+            border-right: 6px solid #ff69b4;
+        }
+
+        #sidebar h3 {
+            text-align: center;
+            color: #c71585;
+            border-bottom: 2px solid #ff69b4;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        #sidebar ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+        }
+
+        #sidebar li {
+            margin-bottom: 12px;
+        }
+
+        /* Navigation links styled as pink gradient buttons */
+        #sidebar a {
+            text-decoration: none;
+            background: linear-gradient(to bottom, #ffe0f0, #ffb6c1);
+            border: 2px solid #ff69b4;
+            color: #c71585;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.1s; /* Subtle 'pop' animation */
+        }
+
+        /* Hover effect: darker pink, color change, small scale pop */
+        #sidebar a:hover {
+            background: linear-gradient(to bottom, #ffb6c1, #ff69b4);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* --- MAIN CONTENT AREA --- */
+        main {
+            flex: 1; /* Main content expands to fill remaining width */
+            padding: 25px;
+            background-color: #fff;
+        }
+
+        /* The 'panels' from image_2.png */
+        section {
+            margin-bottom: 25px;
+            background-color: #fff;
+            border: 3px solid #b0e0e6; /* Keeping a slight hint of pastel blue borders, as in the visual */
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        h2 {
+            color: #da70d6; /* Orchid (soft purple-pink) */
+            margin-top: 0;
+            border-bottom: 3px solid #ffb6c1;
+            padding-bottom: 5px;
+        }
+
+        /* Bullet points for the Interests list are now tiny hearts! */
+        main ul {
+            list-style-type: "💖 "; 
+            padding-left: 20px;
+        }
+
+        main li {
+            color: #4a4a4a;
+            margin-bottom: 8px;
+        }
+
+        /* The specialized panel for 'About Me' data */
+        .profile-data-panel {
+            background-color: #fff0f5; /* Light Lavender Blush */
+            border: 3px solid #da70d6; /* Orchid border */
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        /* --- ADDED: STYLING FOR THE NEW ANIME AVATAR --- */
+        .my-profile-pic {
+            width: 130px; /* Set the desired width */
+            height: auto; /* Maintains aspect ratio */
+            float: left; /* Text wraps around it */
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border: 5px solid #ff69b4; /* Pink border like in the concept */
+            border-radius: 15px; /* Matches the site radius */
+            padding: 3px; /* Extra spacing inside the border */
+            background-color: #fff;
+        }
+
+        /* Clear floats after the profile box */
+        #about::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* --- BLINKING GIF PLACEHOLDERS --- */
+        /* Replicating the GIFs from image_2.png using CSS */
+        .blink-gif-box {
+            border: 3px dashed #da70d6;
+            color: #da70d6;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: web1blink 1s steps(5, start) infinite; /* Replicates classic blinking */
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        @keyframes web1blink {
+            to { visibility: hidden; }
+        }
+
+        /* --- FOOTER (Pink and Orchid) --- */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #da70d6;
+            color: white;
+            border-top: 6px solid #ff69b4;
+            font-size: 0.9em;
+        }
+
+        footer img {
+            vertical-align: middle;
+            margin-left: 5px;
+            /* Simple color hack to make the Neocities logo blend with the pink theme */
+            filter: hue-rotate(320deg); 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        
+        <header>
+            <h1>Welcome to Orpha Mae's Zone</h1>
+            <p>💖 A Sweet Spot on the Web 💖</p>
+        </header>
+
+        <div id="main-content">
+            
+            <nav id="sidebar">
+                <h3>Pink Links</h3>
+                <ul>
+                    <li><a href="#about">✨ About Me</a></li>
+                    <li><a href="#interests">🎮 Interests</a></li>
+                    <li><a href="#">📝 Guestbook</a></li>
+                    <li><a href="#">🔗 Links</a></li>
+                </ul>
+
+                <div class="blink-gif-box">
+                    Under<br>Construction!
+                </div>
+            </nav>
+
+            <main>
+                
+                <section id="about">
+                    <h2>Meet Me ✨</h2>
+                    
+                    <img src="https://pixabay.com/static/uploads/photo/2016/08/20/19/27/anime-girl-1608226_960_720.png" alt="My Pink Anime Avatar" class="my-profile-pic">
+                    
+                    <p>Hello! Welcome to my small patch of the internet.</p>
+                    <p>I love pink themes, cute graphics, pixels, and all things kawaii.</p>
+                    
+                    <div class="profile-data-panel">
+                        <p><strong>Name:</strong> Orpha Mae</p>
+                        <p><strong>Status:</strong> Feeling Cute! 😊</p>
+                        
+                        <p><strong>Socials:</strong> 
+                           <a href="https://www.instagram.com/Doluxemaez" target="_blank" style="color: #c71585; text-decoration: underline;">
+                           @Doluxemaez
+                           </a> (Insta)
+                        </p>
+                    </div>
+                </section>
+
+                <section id="interests">
+                    <h2>My Interests 🎀</h2>
+                    <p>These are a few of my favorite things:</p>
+                    <ul>
+                        <li>Pastel fashion and aesthetic</li>
+                        <li>Playing retro video games 👾</li>
+                        <li>Collecting vintage GIFs</li>
+                        <li>Listening to vaporwave & lo-fi 🎶</li>
+                        <li>Anime and manga (90s vibe!)</li>
+                    </ul>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                Made with love <3
+                Best viewed in 800x600 resolution.
+                <img src="https://neocities.org/img/cat_32x32.png" alt="Neocities Cat Logo">
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
